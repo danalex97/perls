@@ -17,7 +17,7 @@ The benefits of the end-to-end argument lie in flexibility, generalizability and
 
 - Are noted changes in stakeholders(ISPs and governments), user trust and internet availability.
 
-### What could be improved?
+### Reflection
 
 The paper very interestingly notes issues that are still actual such as the lack of trust or internet neutrality.
 
