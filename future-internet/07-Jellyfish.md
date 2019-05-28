@@ -1,10 +1,10 @@
 # Paper summary <br> [Jellyfish: Networking Data Centers Randomly](https://www.usenix.org/conference/nsdi12/technical-sessions/presentation/singla)
 
-#### Summary
+### Summary
 
 Jellyfish is a high-capacity network interconnect which, by adopting a random graph topology, yields itself naturally to incremental expansion.
 
-#### Goals
+### Goals
 
 - allow incremental network expansion
    - structured networks constrain expansion
@@ -12,7 +12,7 @@ Jellyfish is a high-capacity network interconnect which, by adopting a random gr
    - oversubscribing switches makes distribution uneven
 - providing high per-server bandwidth
 
-#### Intuition: bounding throughput
+### Intuition: bounding throughput
 
 ```
 #flows * cap_per_flow <= total_cap (1)
@@ -28,7 +28,7 @@ Thus, the throughput per flow is bounded by the inverse of mean path length. Hen
 
 **Objective:** get mean path length down given the constraints on (d,  ∂) graph parameters.
 
-#### Topology construction
+### Topology construction
 
 - **Main idea:** Build a random graph at the ToR switch layer.
   - each ToR switch with k<sub>i</sub> ports uses r<sub>i</sub> for connecting with other ToR switches
@@ -37,7 +37,7 @@ Thus, the throughput per flow is bounded by the inverse of mean path length. Hen
   - pick a random pair of switches with free ports and add connection
   - for adding a new switch *u* a random link *(x, y)* can be cut, adding links *(u, x)* and *(u, y)*
 
-#### Topology properties
+### Topology properties
 
 - lower mean path length than fat-tree
 - higher bisection bandwidth than fat-tree
@@ -46,7 +46,7 @@ Thus, the throughput per flow is bounded by the inverse of mean path length. Hen
 - better failure resilience than fat-tree: intuition is that after cutting a server or edge, graph is still random enough
 - less cost of expansion
 
-#### Routing and Congestion Control
+### Routing and Congestion Control
 
 - ECMP performs poorly on Jellyfish as it does not provide enough path diversity
 - **k-shortest paths**:
@@ -54,7 +54,7 @@ Thus, the throughput per flow is bounded by the inverse of mean path length. Hen
    - works good with either TCP or Multi-path TCP
    - possible implementation: OpenFlow switches randomly distributing load over allowed paths
 
-#### Cabling
+### Cabling
 
 - group racks into clusters:
   - each cluster connects to some central racks with switches
