@@ -66,7 +66,7 @@ elif B_now >= r + cu: # handle upper reservoir
 else:
 	if f(B_now) >= R_up: # move up on f
 		R_next = max(R_i s.t. R_i < f(B_now))
-	if f(B_now) <= R_up: # move down on f
+	if f(B_now) <= R_down: # move down on f
 		R_next = min(R_i s.t. R_i > f(B_now))
 ```
 
