@@ -1,4 +1,4 @@
-# Paper Summary <br> [End-to-End Transport for Video QoE Fairness](https://mit.edu/papers/sigcomm13.pdf)
+# Paper Summary <br> [End-to-End Transport for Video QoE Fairness](http://web.cs.ucla.edu/~ravi/CS219_F19/papers/minerva.pdf)
 
 ### Paper summary
 
